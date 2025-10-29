@@ -1,16 +1,16 @@
 import { useState } from 'react'
 
 import './App.css'
+import { EVIDENCE_TYPES, GHOSTS } from './data/ghosts'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className='App'>
       <h1>Phasmophobia</h1>
       <h2>Evidence Tracker</h2>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(5)}>Set to 5</button>
+      <h3>Evidence Types: {EVIDENCE_TYPES.length}</h3>
+      <h3>Total Ghosts: {GHOSTS.length}</h3>
     </div>
   )
 }
