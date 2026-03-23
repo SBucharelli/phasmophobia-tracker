@@ -6,10 +6,10 @@ import { EvidenceType } from './data/ghosts'
 
 function App() {
   const [evidenceState, setEvidenceState] = useState<Record<EvidenceType, 'unselected' | 'selected' | 'strikethrough'>>({
-    'D.O.T.S Projector': 'unselected',
+    'DOTS': 'unselected',
     'EMF Level 5': 'unselected',
-    'Freezing Temperatures': 'unselected',
-    'Ghost Orb': 'unselected',
+    'Freezing Temps': 'unselected',
+    'Ghost Orbs': 'unselected',
     'Ghost Writing': 'unselected',
     'Spirit Box': 'unselected',
     'Ultraviolet': 'unselected'
