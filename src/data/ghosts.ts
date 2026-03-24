@@ -1,7 +1,7 @@
 // Evidence types as a constant array
 export const EVIDENCE_TYPES = [
   'DOTS',
-  'EMF Level 5',
+  'EMF 5',
   'Freezing Temps',
   'Ghost Orbs',
   'Ghost Writing',
@@ -38,7 +38,7 @@ export const GHOSTS: Ghost[] = [
   },
   {
     name: 'Goryo',
-    evidence: ['DOTS', 'EMF Level 5', 'Ultraviolet'],
+    evidence: ['DOTS', 'EMF 5', 'Ultraviolet'],
     traits: ['Hunts at 50% sanity  |  Required Evidence: DOTS', 'The Goryo will only give DOTS on video cameras. It will never change it’s ghost room and it won’t roam far away from the ghost room']
   },
   {
@@ -48,7 +48,7 @@ export const GHOSTS: Ghost[] = [
   },
   {
     name: 'Jinn',
-    evidence: ['EMF Level 5', 'Freezing Temps', 'Ultraviolet'],
+    evidence: ['EMF 5', 'Freezing Temps', 'Ultraviolet'],
     traits: ['Hunts at 50% sanity', 'The Jinn will speed up once it sees a player from far away. It will never turn off the breaker and has an ability to instantly drop a players sanity by 25% if it is close to them which will trigger an EMF 2 reading on the breaker as long as it is currently on.']
   },
   {
@@ -68,17 +68,17 @@ export const GHOSTS: Ghost[] = [
   },
   {
     name: 'Myling',
-    evidence: ['EMF Level 5', 'Ghost Writing', 'Ultraviolet'],
+    evidence: ['EMF 5', 'Ghost Writing', 'Ultraviolet'],
     traits: ['Hunts at 50% sanity', 'The Myling’s footsteps are quiet from far away during hunts. That can only be heard within 12 meters of the ghost.']
   },
   {
     name: 'Obake',
-    evidence: ['EMF Level 5', 'Ghost Orbs', 'Ultraviolet'],
+    evidence: ['EMF 5', 'Ghost Orbs', 'Ultraviolet'],
     traits: ['Hunts at 50% sanity  |  Required Evidence: Ultraviolet', 'The Obake is the only ghost who has a chance to not leave fingerprints when touching a door if that ghost has fingerprint evidence. It can also leave a 6 finger fingerprints. While it is hunting it has a 6.66% chance each blink to transform into another ghost model of the same gender.']
   },
   {
     name: 'Oni',
-    evidence: ['DOTS', 'EMF Level 5', 'Freezing Temps'],
+    evidence: ['DOTS', 'EMF 5', 'Freezing Temps'],
     traits: ['Hunts at 50% sanity', 'The Oni is the only ghost who cannot do the airball ghost event. It will be more active, doing more ghost events and it it touches you during a ghost event it will drop your sanity by 20%. When hunting it will blink at a much faster rate.']
   },
   {
@@ -98,7 +98,7 @@ export const GHOSTS: Ghost[] = [
   },
   {
     name: 'Raiju',
-    evidence: ['DOTS', 'EMF Level 5', 'Ghost Orbs'],
+    evidence: ['DOTS', 'EMF 5', 'Ghost Orbs'],
     traits: ['Hunts at 60% sanity if there is electrical equipment around', 'The Raiju will speed up during hunts when it is near electrical equipment,']
   },
   {
@@ -113,7 +113,7 @@ export const GHOSTS: Ghost[] = [
   },
   {
     name: 'Spirit',
-    evidence: ['EMF Level 5', 'Ghost Writing', 'Spirit Box'],
+    evidence: ['EMF 5', 'Ghost Writing', 'Spirit Box'],
     traits: ['Hunts at 50% sanity', 'The Spirit won’t be able to hunt for 3 minutes after being smudged. There’s not much else to say....']
   },
   {
@@ -123,7 +123,7 @@ export const GHOSTS: Ghost[] = [
   },
   {
     name: 'The Twins',
-    evidence: ['EMF Level 5', 'Freezing Temps', 'Spirit Box'],
+    evidence: ['EMF 5', 'Freezing Temps', 'Spirit Box'],
     traits: ['Hunts at 50% sanity', 'The Twins are two ghosts who can both interact with environment. The main ghost has a speed of 90% of normal speed and the decoy has a speed of 110% the normal speed. Either ghost can initiate the hunt, the decoy will hunt from the last location it did an interaction.']
   },
   {

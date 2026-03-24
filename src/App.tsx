@@ -2,12 +2,13 @@ import { useState } from 'react'
 
 import './App.css'
 import { EvidenceSelector } from './components/EvidenceSelector'
-import { EvidenceType } from './data/ghosts'
+import { EvidenceType, GHOSTS } from './data/ghosts'
+import { GhostCard } from './components/GhostCard'
 
 function App() {
   const [evidenceState, setEvidenceState] = useState<Record<EvidenceType, 'unselected' | 'selected' | 'strikethrough'>>({
     'DOTS': 'unselected',
-    'EMF Level 5': 'unselected',
+    'EMF 5': 'unselected',
     'Freezing Temps': 'unselected',
     'Ghost Orbs': 'unselected',
     'Ghost Writing': 'unselected',
@@ -40,8 +41,16 @@ function App() {
     <div className='App'>
       <h1>Phasmophobia</h1>
       <h2>Evidence Tracker</h2>
-
-      <EvidenceSelector evidenceState={evidenceState} onToggleEvidence={handleToggleEvidence} />
+      <div className='flex'>
+        <EvidenceSelector evidenceState={evidenceState} onToggleEvidence={handleToggleEvidence} />
+        <div className='grid'>
+          {GHOSTS.map((ghost => (
+            <div key={ghost.name}>
+              <GhostCard ghost={ghost} />
+            </div>
+          )))}
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,22 +1,35 @@
 .App {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: left;
+  background-image: url('./assets/Phasmo-Background.png');
+  min-height: 100vh;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 72px;
   margin-bottom: 0.5rem;
   text-align: center;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 45px;
   margin-bottom: 1.5rem;
   text-align: center;
   text-transform: uppercase;
+}
+
+.ghost-name-text {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #616161;
+}
+
+.ghost-evidence-text {
+  font-size: 14px;
+  color: #616161;
 }
 
 ul {
@@ -64,4 +77,27 @@ ul {
   pointer-events: none;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.ghost-card {
+  border-radius: 18px;
+  background-color: #262626;
+  padding: 10px;
+  height: 95px;
+  width: 313px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-left: 16px;
 }

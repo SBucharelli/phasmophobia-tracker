@@ -8,7 +8,6 @@ interface EvidenceSelectorProps {
 export const EvidenceSelector = ({ evidenceState, onToggleEvidence }: EvidenceSelectorProps) => {
   return (
     <div className='evidence-selector'>
-      {/* <h3>Selected: {evidenceState.join(', ') || 'None'}</h3> */}
       <div>
         {EVIDENCE_TYPES.map((evidence) => (
           <div key={evidence}>
