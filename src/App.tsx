@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 import './App.css'
-import { EvidenceSelector } from './components/EvidenceSelector'
+import { EvidenceSelector } from './components/EvidenceSelector/EvidenceSelector'
 import { EvidenceType, GHOSTS } from './data/ghosts'
-import { GhostCard } from './components/GhostCard'
+import { GhostCard } from './components/GhostCard/GhostCard'
 
 function App() {
   const [evidenceState, setEvidenceState] = useState<Record<EvidenceType, 'unselected' | 'selected' | 'strikethrough'>>({

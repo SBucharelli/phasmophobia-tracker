@@ -1,4 +1,4 @@
-import { EVIDENCE_TYPES, EvidenceType } from '../data/ghosts'
+import { EVIDENCE_TYPES, EvidenceType } from '../../data/ghosts'
 
 interface EvidenceSelectorProps {
   evidenceState: Record<EvidenceType, 'unselected' | 'selected' | 'strikethrough'>,

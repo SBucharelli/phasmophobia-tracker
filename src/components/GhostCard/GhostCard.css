@@ -1,0 +1,6 @@
+.ghost-card {
+  min-height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
