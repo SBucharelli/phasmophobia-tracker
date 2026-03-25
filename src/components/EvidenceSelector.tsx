@@ -11,7 +11,9 @@ export const EvidenceSelector = ({ evidenceState, onToggleEvidence }: EvidenceSe
       <div>
         {EVIDENCE_TYPES.map((evidence) => (
           <div key={evidence}>
-            <button className={evidenceState[evidence]} onClick={() => onToggleEvidence(evidence)}>{evidence}</button>
+            <button className={evidenceState[evidence]} onClick={() => onToggleEvidence(evidence)}>
+              {evidence}
+            </button>
           </div>
         ))}
       </div>

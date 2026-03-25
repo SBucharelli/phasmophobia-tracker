@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: left;
-  background-image: url('./assets/Phasmo-Background.png');
   min-height: 100vh;
 }
 
@@ -83,8 +82,8 @@ ul {
   border-radius: 18px;
   background-color: #262626;
   padding: 10px;
-  height: 95px;
-  width: 313px;
+  width: 100%;
+  min-height: 95px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -93,11 +92,15 @@ ul {
 
 .flex {
   display: flex;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .grid {
+  flex: 1;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(313px, 313px));
+  justify-content: center;
   gap: 12px;
-  margin-left: 16px;
+  margin-left: 0;
 }
