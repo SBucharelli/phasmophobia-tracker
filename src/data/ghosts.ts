@@ -27,9 +27,19 @@ export const GHOSTS: Ghost[] = [
     traits: ['Hunts at 50% sanity', 'The Banshee will choose a target at the beginning of the game and will only target that player during hunts as long as that player is in the house. If the target is not in the house it will hunt as a normal ghost. It will also hunt only based on the targets sanity. It will only roam toward the target player as long as that player is in the house. It has a 30% chance to “banshee scream” into the parabolic mic. Banshees are more likely to do singing ghost events.']
   },
   {
+    name: 'Dayan',
+    evidence: ['EMF 5', 'Ghost Orbs', 'Spirit Box'],
+    traits: ['Hunts at 65%, 45%, or 50%', 'Female only. The Dayan will hunt earlier and be faster if there is a player near the ghost and moving.']
+  },
+  {
     name: 'Demon',
     evidence: ['Freezing Temps', 'Ultraviolet', 'Ghost Writing'],
     traits: ['Hunts at 70% sanity', 'The Demon has a special ability that it can initiate a hunt whenever it wants, regardless of player sanity. The crucifix has an extended protection range against the it. Can hunt just 60 seconds after being smudged.']
+  },
+  {
+    name: 'Gallu',
+    evidence: ['EMF 5', 'Ultraviolet', 'Spirit Box'],
+    traits: ['Hunts at65%, 45%, or 50%', 'The Gallu will enter into an enraged state if it steps in salt, despite having UV as one of it\'s evidence. When trying to escape from a Gallu during a hunt, be aware that using salt or incense to slow it down will cause the Gallu to speed up afterwards.']
   },
   {
     name: 'Deogen',
@@ -75,6 +85,11 @@ export const GHOSTS: Ghost[] = [
     name: 'Obake',
     evidence: ['EMF 5', 'Ghost Orbs', 'Ultraviolet'],
     traits: ['Hunts at 50% sanity  |  Required Evidence: Ultraviolet', 'The Obake is the only ghost who has a chance to not leave fingerprints when touching a door if that ghost has fingerprint evidence. It can also leave a 6 finger fingerprints. While it is hunting it has a 6.66% chance each blink to transform into another ghost model of the same gender.']
+  },
+  {
+    name: 'Obambo',
+    evidence: ['Ghost Writing', 'Ultraviolet', 'DOTS'],
+    traits: ['Hunts at 10% in calm state and 65% in aggressive state', 'The Obambo has two states: "calm" and "aggressive". It always starts calm at the beginning of a map, but once the front door is opened for the first time, it will become aggressive 1 minute later and every 2 minutes after that.']
   },
   {
     name: 'Oni',

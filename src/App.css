@@ -1,9 +1,9 @@
 .App {
-  /* max-width: 1200px; */
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: left;
+  padding: 16px 48px;
   min-height: 100vh;
+  /* align-content: center; */
+
+
 }
 
 h1 {
@@ -20,64 +20,9 @@ h2 {
   text-transform: uppercase;
 }
 
-.ghost-name-text {
-  font-size: 28px;
-  text-transform: uppercase;
-  color: #616161;
-}
-
-.ghost-evidence-text {
-  font-size: 14px;
-  color: #616161;
-}
-
 ul {
   margin-left: 1rem;
 }
-
-.evidence-selector button {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #FFFFFF;
-  border: 2px solid #414141;
-  height: 51px;
-  width: 270px;
-  padding: 0px 25px;
-  margin: 4px;
-  cursor: pointer;
-  font-size: 24px;
-  text-align: left;
-}
-
-.evidence-selector button:hover {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-.evidence-selector button:active {
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
-.evidence-selector button.selected {
-  background-color: rgba(255, 255, 255, 0.25);
-  color: #FFFFFF;
-}
-
-.evidence-selector button.strikethrough {
-  color: #888888;
-  position: relative;
-}
-
-.evidence-selector button.strikethrough::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('./assets/strikethrough.svg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  pointer-events: none;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 
 .flex {
   display: flex;
@@ -88,8 +33,7 @@ ul {
 .grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(313px, 313px));
+  grid-template-columns: repeat(auto-fit, 313px);
   justify-content: center;
   gap: 12px;
-  margin-left: 0;
 }

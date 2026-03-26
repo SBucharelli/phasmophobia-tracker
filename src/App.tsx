@@ -24,18 +24,51 @@ function App() {
 
     switch (currentState) {
       case 'unselected':
-        setEvidenceState({ ...evidenceState, [evidence]: 'selected' })
+        setEvidenceState((prev) => ({
+          ...prev,
+          [evidence]: 'selected'
+        }))
         break
       case 'selected':
-        setEvidenceState({ ...evidenceState, [evidence]: 'strikethrough' })
+        setEvidenceState((prev) => ({
+          ...prev,
+          [evidence]: 'strikethrough'
+        }))
         break
       case 'strikethrough':
-        setEvidenceState({ ...evidenceState, [evidence]: 'unselected' })
+        setEvidenceState((prev) => ({
+          ...prev,
+          [evidence]: 'unselected'
+        }))
         break
       default:
-        setEvidenceState({ ...evidenceState, [evidence]: 'unselected' })
+        setEvidenceState((prev) => ({
+          ...prev,
+          [evidence]: 'unselected'
+        }))
     }
   }
+
+  const selectedEvidence = Object.entries(evidenceState).filter((evidenceState) => evidenceState[1] == 'selected').map((selectedEvidence) => selectedEvidence[0]) as EvidenceType[]
+  const struckEvidence = Object.entries(evidenceState).filter((evidenceState) => evidenceState[1] == 'strikethrough').map((selectedEvidence) => selectedEvidence[0]) as EvidenceType[]
+  console.log('this is the object.entries', selectedEvidence)
+  console.log('this is struckthrough', struckEvidence)
+  // const testGhost = GHOSTS[0]
+  // console.log(testGhost)
+
+  // const matchesSelectedEvidence = selectedEvidence.every((evidence) => {
+  //   return testGhost.evidence.includes(evidence)
+  // })
+
+  // const hasStruckEvidence = struckEvidence.some((evidence) => {
+  //   return testGhost.evidence.includes(evidence)
+  // })
+  // console.log('match', matchesSelectedEvidence)
+  // console.log('struck', hasStruckEvidence)
+
+  // const isEliminated = !matchesSelectedEvidence || hasStruckEvidence
+
+  // console.log('isEliminated', isEliminated)
 
   return (
     <div className='App'>
@@ -44,11 +77,24 @@ function App() {
       <div className='flex'>
         <EvidenceSelector evidenceState={evidenceState} onToggleEvidence={handleToggleEvidence} />
         <div className='grid'>
-          {GHOSTS.map((ghost => (
-            <div key={ghost.name}>
-              <GhostCard ghost={ghost} />
-            </div>
-          )))}
+          {GHOSTS.map((ghost => {
+            const matchesSelectedEvidence = selectedEvidence.every((evidence) => {
+              return ghost.evidence.includes(evidence)
+            })
+
+            const hasStruckEvidence = struckEvidence.some((evidence) => {
+              return ghost.evidence.includes(evidence)
+            })
+
+            const isEliminated = !matchesSelectedEvidence || hasStruckEvidence
+            console.log('isEliminated', ghost.name, isEliminated)
+
+            return (
+              <div key={ghost.name}>
+                <GhostCard ghost={ghost} isEliminated={isEliminated} />
+              </div>
+            )
+          }))}
         </div>
       </div>
     </div>

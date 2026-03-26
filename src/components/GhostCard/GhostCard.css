@@ -4,3 +4,18 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.ghost-name-text {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.ghost-evidence-text {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.eliminated {
+  color: #616161;
+}
