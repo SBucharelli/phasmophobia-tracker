@@ -17,7 +17,6 @@ function App() {
   })
 
   const handleToggleEvidence = (evidence: EvidenceType) => {
-    console.log(evidenceState)
     // need to check the status of the evidence and update as the selection is made
     // 1. get current state of this evidence
     const currentState = evidenceState[evidence]
@@ -51,24 +50,6 @@ function App() {
 
   const selectedEvidence = Object.entries(evidenceState).filter((evidenceState) => evidenceState[1] == 'selected').map((selectedEvidence) => selectedEvidence[0]) as EvidenceType[]
   const struckEvidence = Object.entries(evidenceState).filter((evidenceState) => evidenceState[1] == 'strikethrough').map((selectedEvidence) => selectedEvidence[0]) as EvidenceType[]
-  console.log('this is the object.entries', selectedEvidence)
-  console.log('this is struckthrough', struckEvidence)
-  // const testGhost = GHOSTS[0]
-  // console.log(testGhost)
-
-  // const matchesSelectedEvidence = selectedEvidence.every((evidence) => {
-  //   return testGhost.evidence.includes(evidence)
-  // })
-
-  // const hasStruckEvidence = struckEvidence.some((evidence) => {
-  //   return testGhost.evidence.includes(evidence)
-  // })
-  // console.log('match', matchesSelectedEvidence)
-  // console.log('struck', hasStruckEvidence)
-
-  // const isEliminated = !matchesSelectedEvidence || hasStruckEvidence
-
-  // console.log('isEliminated', isEliminated)
 
   return (
     <div className='App'>
@@ -87,7 +68,6 @@ function App() {
             })
 
             const isEliminated = !matchesSelectedEvidence || hasStruckEvidence
-            console.log('isEliminated', ghost.name, isEliminated)
 
             return (
               <div key={ghost.name}>
