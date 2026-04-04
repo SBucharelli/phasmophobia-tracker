@@ -143,7 +143,7 @@ export const GHOSTS: Ghost[] = [
   },
   {
     name: 'Wraith',
-    evidence: ['DOTS', 'Freezing Temps', 'Spirit Box'],
+    evidence: ['DOTS', 'EMF 5', 'Spirit Box'],
     traits: ['Hunts at 50% sanity', 'The Wraith can teleport to a players location. When it does it will give an EMF 2 reading. It is the only ghost who cannot step in salt.']
   },
   {
