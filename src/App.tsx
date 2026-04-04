@@ -48,6 +48,18 @@ function App() {
     }
   }
 
+  const handleClearEvidence = () => {
+    setEvidenceState({
+      'DOTS': 'unselected',
+      'EMF 5': 'unselected',
+      'Freezing Temps': 'unselected',
+      'Ghost Orbs': 'unselected',
+      'Ghost Writing': 'unselected',
+      'Spirit Box': 'unselected',
+      'Ultraviolet': 'unselected'
+    })
+  }
+
   const selectedEvidence = Object.entries(evidenceState).filter((evidenceState) => evidenceState[1] == 'selected').map((selectedEvidence) => selectedEvidence[0]) as EvidenceType[]
   const struckEvidence = Object.entries(evidenceState).filter((evidenceState) => evidenceState[1] == 'strikethrough').map((selectedEvidence) => selectedEvidence[0]) as EvidenceType[]
 
@@ -56,7 +68,7 @@ function App() {
       <h1>Phasmophobia</h1>
       <h2>Evidence Tracker</h2>
       <div className='flex'>
-        <EvidenceSelector evidenceState={evidenceState} onToggleEvidence={handleToggleEvidence} />
+        <EvidenceSelector evidenceState={evidenceState} onToggleEvidence={handleToggleEvidence} onClearEvidence={handleClearEvidence} />
         <div className='grid'>
           {GHOSTS.map((ghost => {
             const matchesSelectedEvidence = selectedEvidence.every((evidence) => {
