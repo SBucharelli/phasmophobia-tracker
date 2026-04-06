@@ -123,7 +123,7 @@ export const GHOSTS: Ghost[] = [
   },
   {
     name: 'Shade',
-    evidence: ['DOTS', 'Spirit Box', 'Ultraviolet'],
+    evidence: ['EMF 5', 'Ghost Writing', 'Freezing Temps'],
     traits: ['Hunts at 35% sanity', 'The Shade won’t throw items or hunt while players are in the ghost room. It has a higher chance to do shadow ghost events. ']
   },
   {
