@@ -4,8 +4,6 @@ import { Card } from '../Card/Card'
 import { Ghost } from '../../data/ghosts'
 
 interface GhostCardProps {
-  // evidenceState: Record<EvidenceType, 'unselected' | 'selected' | 'strikethrough'>,
-  // onToggleEvidence: (evidence: EvidenceType) => void
   ghost: Ghost
   isEliminated: boolean
 }
