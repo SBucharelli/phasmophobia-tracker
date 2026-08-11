@@ -82,9 +82,7 @@ function App() {
             const isEliminated = !matchesSelectedEvidence || hasStruckEvidence
 
             return (
-              <div key={ghost.name}>
-                <GhostCard ghost={ghost} isEliminated={isEliminated} />
-              </div>
+              <GhostCard key={ghost.name} ghost={ghost} isEliminated={isEliminated} />
             )
           }))}
         </div>
